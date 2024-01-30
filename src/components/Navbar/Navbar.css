@@ -1,0 +1,63 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 0 30px;
+}
+
+.navbar-logo img {
+    /* Adjust the size of your logo */
+    height: 60px; 
+}
+
+.navbar-menu-icon {
+    display: none; /* Initially hide the menu icon */
+    cursor: pointer;
+}
+
+.navbar-menu-icon span {
+    font-size: 24px; /* Adjust the size of the menu icon */
+}
+
+.navbar-links {
+    display: flex;
+    gap: 50px; /* Spacing between navigation links */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-cart img {
+    height: 40px; /* Adjust the size of your cart icon */
+    cursor: pointer;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links on smaller screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 70px; /* Adjust the distance from the top */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .navbar-menu-icon {
+        display: block; /* Show the menu icon */
+    }
+}
