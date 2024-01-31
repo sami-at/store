@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import NavDrawer from '../NavDrawer/NavDrawer';
 import './Navbar.css';
+
 
 function Navbar() {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);

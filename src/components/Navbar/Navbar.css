@@ -22,13 +22,13 @@
     font-size: 24px; /* Adjust the size of the menu icon */
 }
 
-.navbar-links {
+.navbar-drawer {
     display: flex;
     gap: 50px; /* Spacing between navigation links */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.navbar-links a {
+.navbar-drawer a {
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -41,7 +41,7 @@
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .navbar-links {
+    .navbar-drawer {
         display: none; /* Hide links on smaller screens */
         flex-direction: column; /* Stack links vertically */
         position: absolute;
@@ -61,3 +61,4 @@
         display: block; /* Show the menu icon */
     }
 }
+
