@@ -1,0 +1,79 @@
+/* Include the Google Fonts link in your HTML <head> for these fonts to work */
+.home-page {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Applying Roboto for body text */
+}
+
+.brand-section {
+    height: 100vh; /* Full viewport height for each section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px; /* Increased padding for better spacing */
+    font-family: 'Montserrat', sans-serif; /* Montserrat for a stylish look */
+}
+
+.adidas {
+    background-image: url('/src/images/adidas/slide.jpg'); /* Replace with your path */
+    background-size: cover;
+    background-position: center;
+}
+
+.nike {
+    background-image: url('/src/images/nike/slide.jpg'); /* Replace with your path */
+    background-size: cover;
+    background-position: center;
+}
+
+.puma {
+    background-image: url('/src/images/puma/slide.jpg'); /* Replace with your path */
+    background-size: cover;
+    background-position: center;
+}
+
+.under-armour {
+    background-image: url('/src/images/underar/slide.jpg'); /* Replace with your path */
+    background-size: cover;
+    background-position: center;
+}
+/* Individual brand sections */
+.adidas, .nike, .puma, .under-armour {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensure it covers full height of the viewport */
+}
+
+/* Styling for headings */
+h2 {
+    font-size: 48px; /* Larger font size for impact */
+    font-weight: 700; /* Bold weight for Montserrat */
+    margin-bottom: 20px; /* More space below the heading */
+}
+
+/* Paragraphs / Descriptions */
+p {
+    font-size: 20px; /* Larger for readability */
+    max-width: 600px; /* Optimal reading width */
+    margin: 0 auto 20px; /* Centering and spacing */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Buttons */
+button {
+    padding: 12px 24px; /* More padding for a larger button */
+    font-size: 18px; /* Bigger text in buttons */
+    font-weight: 500; /* Medium weight looks better on buttons */
+    color: #fff;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Rounded corners for a modern look */
+}
+
+button:hover {
+    background-color: #444; /* Slightly lighter on hover for feedback */
+}
