@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {  useState } from 'react';
 import NavDrawer from '../NavDrawer/NavDrawer';
 import './Navbar.css';
 
@@ -10,6 +10,7 @@ function Navbar() {
         setIsDrawerOpen(!isDrawerOpen);
     };
 
+    
     return (
         <nav className="navbar">
             <div className="navbar-menu-icon" onClick={toggleDrawer}>
