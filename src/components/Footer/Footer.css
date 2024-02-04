@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Futura&display=swap');
 
-.footer {
+.footer, .footer-mobile {
     background-color: #000; /* Changed to black */
     color: white;
     padding: 40px 20px;
@@ -12,23 +12,41 @@
 }
 
 
+.footer-mobile {
+    display: none;
+}
 
 .footer-section {
     flex: 1;
-    min-width: 200px;
-    max-width: 300px;
     margin-bottom: 20px;
+    position: relative; /* For the after pseudo-element */
 }
+
+.footer-section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #333; /* Lighter/Darker line color */
+}
+
 
 .footer-section h3 {
     margin-bottom: 15px;
     font-weight: 700;
-    
+    cursor: pointer; /* Indicates it's clickable */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 0.3s ease; /* Smooth transition for the icon */
 }
 
 .footer-section a {
     color: #fff;
+    margin-right: 20px;
     text-decoration: none;
     display: block;
     margin-bottom: 10px;
@@ -41,15 +59,16 @@
 
 .footer-section p {
     color: #fff;
-    font-size:16px ;
-    text-decoration: none;
-    display: block;
+    font-size: 16px;
+    max-width: 350px;
+    margin: 0px;
+    /* text-decoration: none; */
+    /* display: block; */
     margin-bottom: 10px;
-    transition: color 0.3s ease;
+    /* transition: color 0.3s ease; */
 }
 
 .footer-rights {
-    
     width: 100%;
     text-align: center;
     color: #ccc;
@@ -57,23 +76,26 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.footer-rights p {
+    margin-bottom: 0px;
+    margin-bottom: -20px;
+    font-size: 15px;
+}
 
-.footer .email-input-container {
+
+
+.footer .email-input-container , .footer-mobile .email-input-container {
     display: flex;
-    width: 90%;
+    max-width: 250px;
     align-items: center;
     background-color: #000; /* Matching background */
     border: 1px solid white; /* Thin white border */
-    border-radius: 0; /* No border radius */
     padding-left: 10px;
-    
 }
 
-.footer .email-input-container .email-icon {
-    fill: white; /* White color for the email icon */
-}
 
-.footer input[type="email"] {
+
+.footer input , .footer-mobile input[type="email"] {
     flex-grow: 1;
     background-color: transparent;
     border: none; /* Remove border */
@@ -82,38 +104,40 @@
     outline: none; /* Remove outline on focus */
 }
 
-.footer .email-input-container:focus-within {
+.footer .email-input-container , .footer-mobile .email-input-container:focus-within {
     border-color: #fff; /* Brighter and thicker border when input is focused */
-    border-width: 2px; /* Thicker border */
+    border-width: 2px;
 }
 
-.footer button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.email-icon {
+    min-width: 24px;
+    color: #fff;
     cursor: pointer;
-    background-color: #f0f0f0;
-    color: #333;
-    transition: background-color 0.0s ease;
 }
 
-.footer button:hover {
-    background-color: #ddd;
-}
-
-/* Responsive adjustments */
-@media (max-width: 940px) {
-   
-
-
-    .footer-section h4 {
-        margin-top: 20px;
-    }
-}
 
 @media (max-width: 600px) {
-    .footer-rights {
-        margin-top: 10px;
+    .footer {
+        display: none;
     }
-}
 
+    .footer-mobile {
+        display: block;
+    }
+
+    .footer-section div {
+        margin-top: 0; /* Adjust as needed for spacing */
+        overflow: hidden; /* Keeps the content from showing outside the bounds */
+        transition: max-height 0.3s ease-out; /* Smooth expansion */
+    }
+    .icon {
+         transition: transform 0.5s ease; /* Smooth transition for rotation */
+    }
+  
+    .icon.rotate {
+        transform: rotate(180deg); /* Rotates the icon to indicate "up" */
+    }
+  
+  
+        
+}

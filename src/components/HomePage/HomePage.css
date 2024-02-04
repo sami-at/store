@@ -5,16 +5,39 @@
     font-family: 'Roboto', sans-serif; /* Applying Roboto for body text */
 }
 
+
+/* Modified brand-section to include an overlay */
 .brand-section {
+    position: relative; /* This makes sure the pseudo-element is positioned relative to its parent */
     height: 100vh; /* Full viewport height for each section */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 40px 20px; /* Increased padding for better spacing */
+    padding: 40px 20px;
     font-family: 'Montserrat', sans-serif; /* Montserrat for a stylish look */
+
 }
+
+/* Adding an overlay */
+.brand-section::before {
+    content: ""; /* Necessary for the pseudo-element to work */
+    position: absolute; /* Positions the overlay in relation to its parent's position */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    z-index: 1; /* Ensures the overlay is above the background image but below the text */
+}
+
+/* Ensure content is placed above the overlay */
+.brand-section > * {
+    position: relative; /* This positions the children above the pseudo-element */
+    z-index: 2;
+}
+
 
 .adidas {
     background-image: url('/src/images/adidas/slide.jpg'); /* Replace with your path */
@@ -55,8 +78,8 @@ h2 {
 
 /* Paragraphs / Descriptions */
 p {
-    font-size: 20px; /* Larger for readability */
-    max-width: 600px; /* Optimal reading width */
+    font-size: 30px; /* Larger for readability */
+    max-width: 700px; /* Optimal reading width */
     margin: 0 auto 20px; /* Centering and spacing */
     line-height: 1.6; /* Improved readability */
 }

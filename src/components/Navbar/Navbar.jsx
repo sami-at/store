@@ -27,6 +27,8 @@ function Navbar() {
                 <a href="/nike">Nike</a>
                 <a href="/puma">Puma</a>
                 <a href="/under-armour">Under Armour</a>
+                <a href="/track-order">Track Your Order</a>
+                <a href="/contact">Contact us</a>
             </div>
 
             <div className="navbar-cart">
