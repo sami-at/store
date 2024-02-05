@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Futura&display=swap');
 
+
 .footer, .footer-mobile {
     background-color: #000; /* Changed to black */
     color: white;
@@ -93,6 +94,10 @@
     padding-left: 10px;
 }
 
+.footer .email-input-container , .footer-mobile .email-input-container:focus-within {
+    border-width: 2px;
+}
+
 
 
 .footer input , .footer-mobile input[type="email"] {
@@ -104,10 +109,7 @@
     outline: none; /* Remove outline on focus */
 }
 
-.footer .email-input-container , .footer-mobile .email-input-container:focus-within {
-    border-color: #fff; /* Brighter and thicker border when input is focused */
-    border-width: 2px;
-}
+
 
 .email-icon {
     min-width: 24px;

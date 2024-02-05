@@ -1,4 +1,3 @@
-import React from 'react';
 import './HomePage.css'; // Ensure this path matches where you save your CSS
 
 function HomePage() {

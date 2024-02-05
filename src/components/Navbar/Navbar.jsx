@@ -19,7 +19,7 @@ function Navbar() {
             
 
             <div className="navbar-logo">
-                <img src="src\images\Logo.png" alt="Store Logo" />
+            <a href="/"><img src="src\images\Logo.png" alt="Store Logo" /></a>
             </div>
             
             <div className={`navbar-drawer ${isDrawerOpen ? 'open' : ''}`}>

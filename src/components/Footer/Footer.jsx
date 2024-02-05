@@ -1,4 +1,3 @@
-import React from 'react';
 import './Footer.css'; // Ensure you have a CSS file for styling
 // Import your email icon if you have one
 // import { EmailIcon } from './path-to-your-icons'; // Adjust the path as necessary

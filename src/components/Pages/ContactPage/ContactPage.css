@@ -1,0 +1,96 @@
+.contact-container {
+    width: 50%;
+    height: auto;
+    margin: 5% auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: grid;
+    gap: 20px;
+}
+
+.input {
+    padding: 14px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    
+}
+
+.input-group {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-group input,
+.input-group textarea {
+    padding: 14px;
+    margin-top: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    outline: none;
+}
+
+.input-group textarea {
+    height: 100px;
+    resize: vertical; /* Allows the user to resize the textarea vertically */
+}
+
+.send-btn {
+    background-color: #000000;
+    color: white;
+    width: 20%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.send-btn:hover {
+    background-color: #333;
+}
+
+#message {
+    height: 300px;
+}
+
+@media (min-width: 1200px) {
+    .oneline {
+        display: flex;
+        gap: 20px;
+    }
+    .oneline .input-group {
+        flex: 1; /* This makes each input group take up equal space */
+    }
+    
+
+
+}
+
+
+@media (max-width: 768px) {
+    .contact-container {
+        width: 80%; /* Makes the container wider on smaller screens */
+        height: auto; /* Adjusts height dynamically based on content */
+    }
+
+    .send-btn {
+        width: 50%; /* Increases button width for better mobile interaction */
+        margin: 0 auto; /* Centers the button if necessary */
+    }
+
+    #message {
+        height: 200px; /* Adjusts the textarea height for smaller screens */
+    }
+}
