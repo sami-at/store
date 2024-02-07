@@ -27,7 +27,7 @@ function HomePage() {
             {/* Under Armour Section */}
             <section className="brand-section under-armour">
                 <h2>Under Armour</h2>
-                <p>Push your limits with Under Armour's sportswear.</p>
+                <p>Push your limits with Under Armour s sportswear.</p>
                 <button>Shop Now</button>
             </section>
         </div>

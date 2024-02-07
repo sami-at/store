@@ -1,6 +1,13 @@
 import './TrackOrderPage.css'; 
+import  { useEffect } from 'react';
+
+
+
 
 function TrackOrderPage() {
+    useEffect(() => {
+        document.title = 'My Page Title';
+     }, []);
     return (
         <div className='wrapper'>
             <h1 className="track-order-title">Track Your Order</h1>

@@ -1,0 +1,96 @@
+/* AdidasPage.css */
+.adidas-page {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    width: 200px;
+    margin-right: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+  }
+  
+  .filter-sort {
+    margin-bottom: 20px;
+  }
+  
+  .filter-sort select {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Controls space between product items */
+  }
+  
+  .product-item {
+    width: calc(33.333% - 20px); /* Adjust based on gap and number of items per row */
+    border: 1px solid #ddd; /* Simple border */
+    padding: 10px;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    text-align: center;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .product-old-price {
+    margin-left: 10px;
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .adidas-page {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .products-container {
+      justify-content: center;
+    }
+  
+    .product-item {
+      width: calc(50% - 20px); /* Adjust for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-item {
+      width: 100%; /* Full width on very small screens */
+    }
+  }
+  
