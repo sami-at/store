@@ -1,6 +1,11 @@
 import './ContactPage.css'; // Ensure you have this CSS file in the same directory
+import { useEffect } from 'react';
 
 function ContactPage() {
+    useEffect(() => {
+        document.title = 'CONTUCT-US'; // Set the title here
+    
+      }, []);
     return (
         <div className="contact-container">
             <h1>Contact</h1>

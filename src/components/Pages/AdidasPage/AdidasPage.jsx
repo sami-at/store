@@ -10,6 +10,11 @@ const AdidasPage = () => {
     { id: 4, name: 'Adidas Casual Shoes', price: 80, oldPrice: '', imgSrc: 'path/to/image4.jpg' },
   ];
 
+  useEffect(() => {
+    document.title = 'Adidas-Store'; // Set the title here
+
+  }, []);
+
   const [products, setProducts] = useState(initialProducts);
   const [sortOption, setSortOption] = useState('');
 

@@ -5,8 +5,9 @@ import  { useEffect } from 'react';
 
 
 function TrackOrderPage() {
+
     useEffect(() => {
-        document.title = 'My Page Title';
+        document.title = 'Track Order';
      }, []);
     return (
         <div className='wrapper'>
