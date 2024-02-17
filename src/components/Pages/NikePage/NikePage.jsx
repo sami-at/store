@@ -1,13 +1,15 @@
 import { useEffect } from "react";
+import ScrollToTop from "../../ScrollToTop";
 
 function NikePage() {
   useEffect(() => {
-    document.title = 'Nike-Store'; // Set the title here
+    document.title = 'NIKE - Section'; // Set the title here
 
   }, []);
     return (
       <div>
         {/* Content */}
+        <ScrollToTop />
       </div>
     );
   }

@@ -1,6 +1,7 @@
 // AdidasPage.jsx
 import { useState, useEffect } from 'react';
 import './AdidasPage.css'; // Ensure you have this CSS file for styles
+import ScrollToTop from '../../ScrollToTop';
 
 const AdidasPage = () => {
   const initialProducts = [
@@ -11,7 +12,7 @@ const AdidasPage = () => {
   ];
 
   useEffect(() => {
-    document.title = 'Adidas-Store'; // Set the title here
+    document.title = 'ADIDAS - Section'; // Set the title here
 
   }, []);
 
@@ -79,6 +80,7 @@ const AdidasPage = () => {
           ))}
         </div>
       </div>
+      <ScrollToTop />
     </div>
   );
 };

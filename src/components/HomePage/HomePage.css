@@ -1,102 +1,98 @@
-/* Include the Google Fonts link in your HTML <head> for these fonts to work */
 .home-page {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: min(100%, 1200px);
+    grid-template-rows: repeat(4,1fr);
+    min-height: 270dvh;
+    place-content: center;
+}
+
+.brand-section {
+    
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brand-section:hover {
+    transform: scale(1.03);
+}
+
+.brand-overlay {
     text-align: center;
     color: white;
-    font-family: 'Roboto', sans-serif; /* Applying Roboto for body text */
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    
 }
 
-
-/* Modified brand-section to include an overlay */
-.brand-section {
-    position: relative; /* This makes sure the pseudo-element is positioned relative to its parent */
-    height: 100vh; /* Full viewport height for each section */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 20px;
-    font-family: 'Montserrat', sans-serif; /* Montserrat for a stylish look */
-
-}
-
-/* Adding an overlay */
 .brand-section::before {
-    content: ""; /* Necessary for the pseudo-element to work */
-    position: absolute; /* Positions the overlay in relation to its parent's position */
+    backdrop-filter: blur(5px);
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
-    z-index: 1; /* Ensures the overlay is above the background image but below the text */
-}
-
-/* Ensure content is placed above the overlay */
-.brand-section > * {
-    position: relative; /* This positions the children above the pseudo-element */
-    z-index: 2;
-}
-
-
-.adidas {
-    background-image: url('/src/images/adidas/slide.jpg'); /* Replace with your path */
-    background-size: cover;
-    background-position: center;
-}
-
-.nike {
-    background-image: url('/src/images/nike/slide.jpg'); /* Replace with your path */
-    background-size: cover;
-    background-position: center;
-}
-
-.puma {
-    background-image: url('/src/images/puma/slide.jpg'); /* Replace with your path */
-    background-size: cover;
-    background-position: center;
-}
-
-.under-armour {
-    background-image: url('/src/images/underar/slide.jpg'); /* Replace with your path */
-    background-size: cover;
-    background-position: center;
-}
-/* Individual brand sections */
-.adidas, .nike, .puma, .under-armour {
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh; /* Ensure it covers full height of the viewport */
-}
-
-/* Styling for headings */
-h2 {
-    font-size: 48px; /* Larger font size for impact */
-    font-weight: 700; /* Bold weight for Montserrat */
-    margin-bottom: 20px; /* More space below the heading */
-}
-
-/* Paragraphs / Descriptions */
-p {
-    font-size: 30px; /* Larger for readability */
-    max-width: 700px; /* Optimal reading width */
-    margin: 0 auto 20px; /* Centering and spacing */
-    line-height: 1.6; /* Improved readability */
-}
-
-/* Buttons */
-button {
-    padding: 12px 24px; /* More padding for a larger button */
-    font-size: 18px; /* Bigger text in buttons */
-    font-weight: 500; /* Medium weight looks better on buttons */
-    color: #fff;
-    background-color: #000;
-    border: none;
-    cursor: pointer;
+    background: rgba(0, 0, 0, 0.6);
     transition: background-color 0.3s ease;
-    border-radius: 5px; /* Rounded corners for a modern look */
 }
 
-button:hover {
-    background-color: #444; /* Slightly lighter on hover for feedback */
+.brand-section:hover::before {
+    background: rgba(0, 0, 0, 0.3);
 }
+
+h2 {
+    font-size: 2rem; /* Keeps the size significant for headings */
+    margin-bottom: 1rem;
+    color: #fff; /* Ensures high contrast against the dark background */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Adds a subtle shadow for better legibility */
+}
+
+p {
+    font-size: 1.2rem; /* Adequate size for readability */
+    margin-bottom: 1.5rem;
+    color: #dcdcdc; /* A lighter color for contrast but softer than pure white */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Enhances readability */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem; /* Ensures button text is comfortably legible */
+    color: #000; /* Dark text for contrast */
+    background-color: #fff; /* Bright background for visibility */
+    border: 2px solid transparent; /* Adds definition without color distraction */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    outline: none; /* Removes the default focus outline to customize later */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a subtle shadow for depth */
+}
+
+button:hover, button:focus {
+    background-color: #000000; /* Slightly darker to indicate hover or focus */
+    color: #ebebeb;
+    border-color: #000; /* Adds a subtle border change on hover/focus */
+    outline: none; /* Ensures no default browser outline is shown */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Enhances the shadow for a "lifted" effect */
+}
+
+button:focus {
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.5); /* Adds a focus indicator for accessibility */
+}
+
+
+.adidas { background-image: url('/src/images/adidas/slide.jpg'); }
+.nike { background-image: url('/src/images/nike/slide.jpg'); }
+.puma { background-image: url('/src/images/puma/slide.jpg'); }
+.under-armour { background-image: url('/src/images/underar/slide.jpg'); }
